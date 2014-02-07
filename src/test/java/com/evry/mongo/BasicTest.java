@@ -1,14 +1,14 @@
 package com.evry.mongo;
 
-import java.net.UnknownHostException;
-
-import org.junit.Test;
-
 import com.mongodb.DB;
 import com.mongodb.MongoClient;
+import java.net.UnknownHostException;
+import org.junit.Ignore;
+import org.junit.Test;
 
 public class BasicTest {
 
+    @Ignore
 	@Test
 	public void foo() throws UnknownHostException {
 		MongoClient client = new MongoClient("localhost", 27017 );

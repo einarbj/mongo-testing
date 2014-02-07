@@ -1,9 +1,9 @@
 package com.evry.spring;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -13,22 +13,21 @@ public class SpringTest {
 
 	@Autowired
 	TestDataRepo repo;
-
-	@Autowired
-	MongoOperations mongoOperations;
-
+        
+        @Ignore
 	@Test
 	public void find() {
 		repo.findByName("bla");
 	}
-
+        
+        @Ignore
 	@Test
 	public void save() {
-		/*
-		TestData entity = new TestData("fooWithChild", "bar");
+		TestData entity = new TestData();
+                entity.setA("a");
+                entity.setB("b");
 		entity.setNestedTestData(new NestedTestData("NestedData"));
-		repo.save(entity);
-                        */
+		repo.save(entity);      
 	}
 	
 	

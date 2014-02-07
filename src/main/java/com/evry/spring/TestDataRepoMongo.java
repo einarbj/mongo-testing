@@ -11,4 +11,10 @@ public class TestDataRepoMongo implements TestDataRepo {
     public TestData findByName(String name) {
         return repo.findOne(QTestData.testData.name.eq(name));
     }
+
+    public void save(TestData testData) {
+        repo.save(testData);
+    }
+    
+    
 }
