@@ -2,49 +2,50 @@ package com.evry.spring;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document
 @com.google.code.morphia.annotations.Entity
 public class TestData {
 
-	@Id
-	private String id;
+    @Id
+    private String id;
 
-	@Field(value = "a")
-	private String name;
+    private String a;
 
-	@Field
-	private String b;
+    private String b;
 
-	private NestedTestData nestedTestData;
+    private NestedTestData nestedTestData;
 
-	public TestData() {
+    public String getId() {
+        return id;
+    }
 
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public void setNestedTestData(NestedTestData nestedTestData) {
-		this.nestedTestData = nestedTestData;
-	}
+    public void setNestedTestData(NestedTestData nestedTestData) {
+        this.nestedTestData = nestedTestData;
+    }
 
-	public NestedTestData getNestedTestData() {
-		return nestedTestData;
-	}
+    public NestedTestData getNestedTestData() {
+        return nestedTestData;
+    }
 
-	public String getA() {
-		return name;
-	}
+    public String getA() {
+        return a;
+    }
 
-	public void setA(String a) {
-		this.name = a;
-	}
+    public void setA(String a) {
+        this.a = a;
+    }
 
-	public String getB() {
-		return b;
-	}
+    public String getB() {
+        return b;
+    }
 
-	public void setB(String b) {
-		this.b = b;
-	}
+    public void setB(String b) {
+        this.b = b;
+    }
 
 }

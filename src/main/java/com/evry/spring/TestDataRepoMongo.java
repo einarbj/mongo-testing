@@ -9,7 +9,7 @@ public class TestDataRepoMongo implements TestDataRepo {
     private TestDataRepoSpring repo;
 
     public TestData findByName(String name) {
-        return repo.findOne(QTestData.testData.name.eq(name));
+        return repo.findOne(QTestData.testData.a.eq(name));
     }
 
     public void save(TestData testData) {

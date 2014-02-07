@@ -1,5 +1,6 @@
 package com.evry.spring;
 
+import java.util.UUID;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,6 +25,7 @@ public class SpringTest {
 	@Test
 	public void save() {
 		TestData entity = new TestData();
+                entity.setId(UUID.randomUUID().toString());
                 entity.setA("a");
                 entity.setB("b");
 		entity.setNestedTestData(new NestedTestData("NestedData"));
